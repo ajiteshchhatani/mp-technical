@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Box, Button, Divider, Tab, Tabs } from "@mui/material";
 import PropTypes from "prop-types";
 import InvoicesTable from "./InvoicesTable";
-import "./styles.scss";
+import "./_styles.scss";
 import AddIcon from "@mui/icons-material/Add";
 import { useNavigate } from "react-router-dom";
 

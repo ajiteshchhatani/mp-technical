@@ -1,6 +1,6 @@
 import React from "react";
 import { Breadcrumbs, Link } from "@mui/material";
-import "./styles.scss";
+import "./_styles.scss";
 
 export default function NavigationBreadcrumbs() {
     return (

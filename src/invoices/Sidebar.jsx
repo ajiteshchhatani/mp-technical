@@ -9,7 +9,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import MenuIcon from "@mui/icons-material/Menu";
 import Logo from "../../public/Layer 1.svg";
 import ProfileIcon from "../../public/Basics.svg";
-import "./styles.scss";
+import "./_styles.scss";
 import NavigationBreadcrumbs from "./NavigationBreadcrumbs";
 
 export default function Sidebar() {

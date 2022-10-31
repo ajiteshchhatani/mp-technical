@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Divider, Toolbar, Typography } from "@mui/material";
-import "./styles.scss";
+import "./_styles.scss";
 import InvoicesTabs from "./InvoicesTabs";
 import NavigationBreadcrumbs from "./NavigationBreadcrumbs";
 

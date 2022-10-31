@@ -1,7 +1,7 @@
 import React from "react";
 import InvoicesContent from "./InvoicesContent";
 import Sidebar from "./Sidebar";
-import "./styles.scss";
+import "./_styles.scss";
 
 export default function Invoices() {
     return (
