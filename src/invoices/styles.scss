@@ -1,0 +1,242 @@
+/*
+xs, extra-small: 0px
+sm, small: 600px
+md, medium: 900px
+lg, large: 1200px
+xl, extra-large: 1536px
+*/
+
+$blooming-pink: #FF0066;
+$mamo-blue: #3333FF;
+$white: #FFFFFF;
+$text-gray: #9BA1B3;
+
+@mixin theme($theme, $textcolor) {
+    background: $theme;
+    color: $textcolor;
+}
+
+.invoices-top-navigation {
+    @include theme($theme: $mamo-blue, $textcolor: $white);
+    height: 56px;
+    padding: 0;
+    box-shadow: none;
+}
+
+.top-toolbar {
+    min-height: 56px;
+    padding: 0 32px;
+    gap: 8px;
+}
+
+.breadcrumb-links {
+    color: $text-gray;
+}
+
+.user-avatar {
+    margin-left: auto;
+}
+
+.mobile-only-sidebar {
+    display: block;
+
+    .MuiDrawer-paper {
+        box-sizing: border-box;
+        width: 260px;
+        @include theme($theme: $mamo-blue, $textcolor: $white);
+        border: 0;
+    }
+}
+
+.permanent-sidebar {
+    display: none;
+}
+
+.payment-link-button {
+    @include theme($theme: $blooming-pink, $textcolor: $white);
+    text-transform: none;
+    width: 244px;
+    height: 48px;
+    border-radius: 40px;
+    padding: 0 16px;
+    margin: 40px 8px;
+}
+
+.payment-link-button:hover {
+    @include theme($theme: $blooming-pink, $textcolor: $white);
+}
+
+.MuiSvgIcon-root {
+    color: $white;
+}
+
+.main-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 56px 0 0 0;
+    background-color: #F3F5F9;
+}
+
+.mobile-only-breadcrumbs {
+    display: flex;
+    min-height: 44px;
+    background: $white;
+    padding: 0 32px;
+}
+
+.invoices-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include theme($theme: $white, $textcolor: black);
+    padding: 0 32px;
+
+    .MuiTypography-root {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .MuiTypography-subtitle1 {
+        font-size: 16px;
+        font-weight: 500;
+        color: $text-gray;
+    }
+
+    span {
+        color: black;
+    }
+}
+
+.invoices-table-container {
+    display: flex;
+    height: 100%;
+    padding: 32px;
+
+    .MuiDataGrid-columnSeparator {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .invoices-top-navigation {
+        width: calc(100% - 260px);
+        height: 64px;
+        margin-left: 260px;
+        background-color: $white;
+    }
+
+    .top-toolbar {
+        min-height: 64px;
+        padding: 0 48px;
+    }
+
+    .mamo-pay-mobile-logo {
+        display: none;
+    }
+
+    .drawer-container {
+        width: 260px;
+        flex-shrink: 0;
+    }
+
+    .mobile-only-sidebar {
+        display: none;
+    }
+
+    .permanent-sidebar {
+        display: block;
+
+        .MuiDrawer-paper {
+            box-sizing: border-box;
+            width: 260px;
+            @include theme($theme: $mamo-blue, $textcolor: $white);
+            border: 0;
+        }
+    }
+
+    .main-container {
+        width: calc(100% - 260px);
+        padding: 64px 0 0 0;
+    }
+
+    .mobile-only-breadcrumbs {
+        display: none;
+    }
+
+    .invoices-info-container {
+        padding: 0 48px;
+    }
+
+    .invoices-table-container {
+        padding: 48px;
+    }
+}
+
+/* .invoices-container {
+    display: flex;
+    height: 100vh;
+}
+
+.hamburger-menu-icon {
+    margin-right: 16px;
+}
+
+.mobile-drawer {
+    display: block;
+    box-sizing: border-box; 
+    width: 260px;
+}
+
+.MuiDrawer-paper {
+    width: 260px;
+    @include theme($theme: $mamo-blue, $textcolor: $white);
+    border: 0;
+}
+
+.MuiListItem-root {
+    padding: 0 8px;
+}
+
+.MuiListItemButton-root:hover {
+    background-color: #5252FF;
+}
+
+.MuiListItemIcon-root {
+    min-width: 40px;
+}
+
+@media screen and (min-width: 900px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .invoices-top-navigation {
+        width: calc(100% - 260px);
+        height: 64px;
+        margin-left: 260px;
+        background-color: $white;
+    }
+
+    .hamburger-menu-icon {
+        display: none;
+    }
+
+    .navigation-breadcrumbs-desktop {
+        display: block;
+    }
+
+    .mobile-drawer {
+        display: none;
+    }
+
+    .top-navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: calc(100% - 260px);
+        height: 64px;
+        background: $white;
+        margin-left: 260px;
+    }
+} */
