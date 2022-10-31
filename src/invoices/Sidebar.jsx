@@ -11,7 +11,6 @@ import Logo from "../../public/Layer 1.svg";
 import ProfileIcon from "../../public/Basics.svg";
 import "./styles.scss";
 import NavigationBreadcrumbs from "./NavigationBreadcrumbs";
-import InvoicesTable from "./InvoicesTable";
 
 export default function Sidebar() {
     const sidebarList = ['Overview', 'Payment links', 'Invoices', 'Payments', 'Settlements', 'Account settings']
@@ -115,28 +114,6 @@ export default function Sidebar() {
                 >
                     {drawer}
                 </Drawer>
-            </Box>
-
-            <Box
-                component="main"
-                className="main-container"
-            >
-                <Toolbar className="mobile-only-breadcrumbs">
-                    <NavigationBreadcrumbs />
-                </Toolbar>
-
-                <Divider sx={{ display: { xs: 'block', md: 'none' } }}></Divider>
-
-                <Box sx={{ height: '140px' }} className="invoices-info-container">
-                    <Typography variant="h1">Invoices</Typography>
-                    <Typography variant="subtitle1">Total outstanding amount: <span>AED 1915.76</span></Typography>
-                </Box>
-
-                {<Box className="invoices-table-container">
-                    <InvoicesTable />
-                </Box>}
-                
-
             </Box>
 
         </Box>

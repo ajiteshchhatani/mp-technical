@@ -108,14 +108,50 @@ $text-gray: #9BA1B3;
     }
 }
 
-.invoices-table-container {
-    display: flex;
+.tabs-container {
     height: 100%;
-    padding: 32px;
+    margin: 32px;
+    border-radius: 16px;
+    background-color: $white;
+
+    .MuiTabs-root {
+        padding: 0 16px;
+    }
+
+    .MuiTabs-flexContainer {
+        height: 96px;
+    }
+
+    .MuiTab-root {
+        font-size: 16px;
+    }
+
+    .MuiTab-textColorPrimary {
+        color: $text-gray;
+    }
+
+    .Mui-selected {
+        color: $mamo-blue;
+    }
 
     .MuiDataGrid-columnSeparator {
         display: none;
     }
+}
+
+.new-invoice-button {
+    @include theme($theme: $mamo-blue, $textcolor: $white);
+    text-transform: none;
+    width: 170px;
+    height: 48px;
+    border-radius: 40px;
+    padding: 0 16px;
+    margin-left: auto;
+    margin-right: 16px;
+}
+
+.new-invoice-button:hover {
+    @include theme($theme: $mamo-blue, $textcolor: $white);
 }
 
 @media screen and (min-width: 900px) {
@@ -168,8 +204,8 @@ $text-gray: #9BA1B3;
         padding: 0 48px;
     }
 
-    .invoices-table-container {
-        padding: 48px;
+    .tabs-container {
+        margin: 48px;
     }
 }
 
