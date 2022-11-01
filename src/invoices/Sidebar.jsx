@@ -105,6 +105,7 @@ export default function Sidebar() {
                     className="mobile-only-sidebar"
                 >
                     {drawer}
+                    <Box className="sidebar-footer-text"><Typography>❤ Powered by Mamo</Typography></Box>
                 </Drawer>
 
                 <Drawer
@@ -113,6 +114,7 @@ export default function Sidebar() {
                     open
                 >
                     {drawer}
+                    <Box className="sidebar-footer-text"><Typography>❤ Powered by Mamo</Typography></Box>
                 </Drawer>
             </Box>
 

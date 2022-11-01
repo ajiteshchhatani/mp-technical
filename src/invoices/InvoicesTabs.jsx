@@ -50,26 +50,26 @@ export default function InvoicesTabs() {
     return (
         <Box sx={{ width: '100%', height: '100%' }}>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <Tabs value={value} onChange={handleChange} aria-label="invoices-tabs">
-                    <Tab label="All invoices" id="all-invoices-tab" aria-controls="all-invoices-tabpanel"></Tab>
-                    <Tab label="Outstanding" id="outstanding-invoices-tab" aria-controls="outstanding-invoices-tabpanel"></Tab>
-                    <Tab label="Paid" id="paid-invoices-tab" aria-controls="paid-invoices-tabpanel"></Tab>
-                    <Tab label="Cancelled" id="cancelled-invoices-tab" aria-controls="cancelled-invoices-tabpanel"></Tab>
+                <Tabs value={value} scrollButtons allowScrollButtonsMobile variant="scrollable" onChange={handleChange} aria-label="invoices-tabs">
+                    <Tab label="All invoices (10)" id="all-invoices-tab" aria-controls="all-invoices-tabpanel"></Tab>
+                    <Tab label="Outstanding (5)" id="outstanding-invoices-tab" aria-controls="outstanding-invoices-tabpanel"></Tab>
+                    <Tab label="Paid (3)" id="paid-invoices-tab" aria-controls="paid-invoices-tabpanel"></Tab>
+                    <Tab label="Cancelled (2)" id="cancelled-invoices-tab" aria-controls="cancelled-invoices-tabpanel"></Tab>
                 </Tabs>
                 <Button className="new-invoice-button" startIcon={<AddIcon />} onClick={handleFormNavigation}>New Invoice</Button>
             </Box>
             <Divider></Divider>
             <TabPanel value={value} status={0}>
-                <InvoicesTable />
+                <InvoicesTable status="All invoices" />
             </TabPanel>
             <TabPanel value={value} status={1}>
-                <InvoicesTable />
+                <InvoicesTable status="Outstanding" />
             </TabPanel>
             <TabPanel value={value} status={2}>
-                <InvoicesTable />
+                <InvoicesTable status="Paid" />
             </TabPanel>
             <TabPanel value={value} status={3}>
-                <InvoicesTable />
+                <InvoicesTable status="Cancelled" />
             </TabPanel>
         </Box>
     )

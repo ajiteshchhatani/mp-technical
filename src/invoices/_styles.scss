@@ -70,6 +70,12 @@ $text-gray: #9BA1B3;
     color: $white;
 }
 
+.sidebar-footer-text {
+    margin-top: auto;
+    padding: 24px;
+    color: $text-gray;
+}
+
 .main-container {
     flex-grow: 1;
     display: flex;
@@ -90,7 +96,7 @@ $text-gray: #9BA1B3;
     flex-direction: column;
     justify-content: center;
     @include theme($theme: $white, $textcolor: black);
-    padding: 0 32px;
+    padding: 32px;
 
     .MuiTypography-root {
         font-size: 32px;
@@ -152,6 +158,20 @@ $text-gray: #9BA1B3;
 
 .new-invoice-button:hover {
     @include theme($theme: $mamo-blue, $textcolor: $white);
+}
+
+.invoice-details-mobile-container {
+    width: 335px;
+    height: 138px; 
+    padding: 16px; 
+    margin: 16px; 
+    border-radius: 16px;
+    @include theme($theme: $white, $textcolor: #000000);
+}
+
+.invoice-details-mobile-rows {
+    display: flex;
+    justify-content: space-between;
 }
 
 @media screen and (min-width: 900px) {

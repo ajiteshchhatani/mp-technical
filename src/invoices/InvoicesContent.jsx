@@ -3,6 +3,7 @@ import { Box, Divider, Toolbar, Typography } from "@mui/material";
 import "./_styles.scss";
 import InvoicesTabs from "./InvoicesTabs";
 import NavigationBreadcrumbs from "./NavigationBreadcrumbs";
+import InvoicesTabsMobile from "./InvoicesTabsMobile";
 
 export default function InvoicesContent() {
     return (
@@ -23,10 +24,13 @@ export default function InvoicesContent() {
 
 
 
-            <Box className="tabs-container" sx={{ height: '100%', display: { xs: 'none', 'sm': 'block' } }}>
+            <Box className="tabs-container" sx={{ height: '100%' , display: {xs: 'none', sm: 'block'}}}>
                 <InvoicesTabs />
             </Box>
 
+            <Box sx={{ display: {xs: 'block', sm: 'none'}}}>
+                <InvoicesTabsMobile />
+            </Box>
 
         </Box>
     )
